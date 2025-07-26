@@ -15,6 +15,15 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Dragon-themed variants using our Ocean Dragon palette
+        dragon: "bg-dragon-navy text-white hover:bg-dragon-deep-purple transition-all duration-300",
+        emerald:
+          "bg-dragon-emerald text-dragon-deep-purple hover:bg-dragon-emerald/90 font-semibold",
+        teal: "bg-dragon-teal text-white hover:bg-dragon-teal/90",
+        mystical:
+          "bg-gradient-to-r from-dragon-deep-purple to-dragon-dark-purple text-white hover:from-dragon-dark-purple hover:to-dragon-deep-purple",
+        outline_dragon:
+          "border-2 border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -8,6 +11,7 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    ignores: ["dist/**", "node_modules/**", ".eslintrc.cjs", "storybook-static/**"],
     plugins: {
       react: pluginReact,
       "react-hooks": pluginReactHooks,
@@ -36,4 +40,14 @@ export default defineConfig([
     },
   },
   ...tseslint.configs.recommended,
+  // Add Storybook configuration
+  {
+    files: ["**/*.stories.@(js|jsx|mjs|ts|tsx)", "**/.storybook/**/*.@(js|jsx|mjs|ts|tsx)"],
+    plugins: {
+      storybook: storybook,
+    },
+    rules: {
+      ...storybook.configs.recommended.rules,
+    },
+  },
 ]);
