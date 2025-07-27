@@ -1,6 +1,6 @@
 import { Outlet, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { authState } from "../router";
+import { authState } from "../authState";
 
 export default function Root() {
   return (
