@@ -9,8 +9,12 @@ const Button = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
   ) => {
     const sizeClasses = {
       small: "h-8 px-3 text-xs",
+      sm: "h-8 px-3 text-xs", // Alias for small
       medium: "h-10 px-4 py-2 text-sm",
+      default: "h-10 px-4 py-2 text-sm", // Alias for medium
       large: "h-12 px-6 py-3 text-base",
+      lg: "h-12 px-6 py-3 text-base", // Alias for large
+      icon: "h-10 w-10 p-0", // Square icon button
     };
 
     const baseClasses =
@@ -21,6 +25,21 @@ const Button = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
         "bg-dragon-navy text-white hover:bg-dragon-deep-purple active:bg-dragon-deep-purple/90 shadow-sm hover:shadow-md",
       secondary:
         "bg-dragon-emerald text-dragon-deep-purple hover:bg-dragon-emerald/90 active:bg-dragon-emerald/80 font-semibold shadow-sm hover:shadow-md",
+      default:
+        "bg-dragon-navy text-white hover:bg-dragon-deep-purple active:bg-dragon-deep-purple/90 shadow-sm hover:shadow-md",
+      dragon:
+        "bg-dragon-navy text-white hover:bg-dragon-deep-purple active:bg-dragon-deep-purple/90 shadow-sm hover:shadow-md",
+      emerald:
+        "bg-dragon-emerald text-dragon-deep-purple hover:bg-dragon-emerald/90 active:bg-dragon-emerald/80 font-semibold shadow-sm hover:shadow-md",
+      teal: "bg-dragon-teal text-white hover:bg-dragon-teal/90 active:bg-dragon-teal/80 shadow-sm hover:shadow-md",
+      mystical:
+        "bg-gradient-to-r from-dragon-deep-purple to-dragon-dark-purple text-white hover:from-dragon-deep-purple/90 hover:to-dragon-dark-purple/90 active:from-dragon-deep-purple/80 active:to-dragon-dark-purple/80 shadow-sm hover:shadow-md",
+      outline_dragon:
+        "border-2 border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-navy/90 shadow-sm hover:shadow-md",
+      outline:
+        "border-2 border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-navy/90 shadow-sm hover:shadow-md",
+      ghost:
+        "text-dragon-navy bg-transparent hover:bg-dragon-navy/10 active:bg-dragon-navy/20 transition-colors",
     };
 
     const buttonClasses = combineClasses(

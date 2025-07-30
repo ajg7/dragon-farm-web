@@ -25,8 +25,12 @@ const LinkButton = React.forwardRef<HTMLButtonElement, LinkButtonProps>(
   ) => {
     const sizeClasses = {
       small: "text-xs py-1",
+      sm: "text-xs py-1",
       medium: "text-sm py-1",
+      default: "text-sm py-1",
       large: "text-base py-2",
+      lg: "text-base py-2",
+      icon: "text-sm py-1",
     };
 
     const baseClasses =
@@ -35,6 +39,15 @@ const LinkButton = React.forwardRef<HTMLButtonElement, LinkButtonProps>(
     const variantClasses = {
       primary: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
       secondary: "text-dragon-emerald hover:text-dragon-teal underline hover:no-underline",
+      default: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
+      dragon: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
+      emerald: "text-dragon-emerald hover:text-dragon-teal underline hover:no-underline",
+      teal: "text-dragon-teal hover:text-dragon-navy underline hover:no-underline",
+      mystical:
+        "text-dragon-deep-purple hover:text-dragon-dark-purple underline hover:no-underline",
+      outline_dragon: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
+      outline: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
+      ghost: "text-dragon-navy hover:text-dragon-deep-purple underline hover:no-underline",
     };
 
     const buttonClasses = combineClasses(

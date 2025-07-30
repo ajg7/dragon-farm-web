@@ -9,8 +9,12 @@ const OutlinedButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
   ) => {
     const sizeClasses = {
       small: "h-8 px-3 text-xs",
+      sm: "h-8 px-3 text-xs",
       medium: "h-10 px-4 py-2 text-sm",
+      default: "h-10 px-4 py-2 text-sm",
       large: "h-12 px-6 py-3 text-base",
+      lg: "h-12 px-6 py-3 text-base",
+      icon: "h-10 w-10 p-0",
     };
 
     const baseClasses =
@@ -21,6 +25,21 @@ const OutlinedButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
         "border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-deep-purple active:border-dragon-deep-purple",
       secondary:
         "border-dragon-emerald text-dragon-emerald bg-transparent hover:bg-dragon-emerald hover:text-dragon-deep-purple active:bg-dragon-emerald/90",
+      default:
+        "border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-deep-purple active:border-dragon-deep-purple",
+      dragon:
+        "border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-deep-purple active:border-dragon-deep-purple",
+      emerald:
+        "border-dragon-emerald text-dragon-emerald bg-transparent hover:bg-dragon-emerald hover:text-dragon-deep-purple active:bg-dragon-emerald/90",
+      teal: "border-dragon-teal text-dragon-teal bg-transparent hover:bg-dragon-teal hover:text-white active:bg-dragon-teal/90",
+      mystical:
+        "border-dragon-deep-purple text-dragon-deep-purple bg-transparent hover:bg-gradient-to-r hover:from-dragon-deep-purple hover:to-dragon-dark-purple hover:text-white",
+      outline_dragon:
+        "border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-deep-purple active:border-dragon-deep-purple",
+      outline:
+        "border-dragon-navy text-dragon-navy bg-transparent hover:bg-dragon-navy hover:text-white active:bg-dragon-deep-purple active:border-dragon-deep-purple",
+      ghost:
+        "border-transparent text-dragon-navy bg-transparent hover:bg-dragon-navy/10 active:bg-dragon-navy/20",
     };
 
     const buttonClasses = combineClasses(
