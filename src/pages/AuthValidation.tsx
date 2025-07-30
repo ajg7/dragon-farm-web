@@ -1,5 +1,5 @@
 const AuthValidation = () => {
-  return <p>ji</p>;
+  return <div></div>;
 };
 
 export default AuthValidation;

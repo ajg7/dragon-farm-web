@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { oceanDragonPalette } from "@/lib/colors";
 
 export function ColorPaletteShowcase() {
@@ -18,12 +16,12 @@ export function ColorPaletteShowcase() {
         </div>
 
         {/* Color Palette Display */}
-        <Card className="border-dragon-navy/20">
-          <CardHeader>
-            <CardTitle className="text-dragon-deep-purple">Color Palette</CardTitle>
-            <CardDescription>The five sacred colors of the Ocean Dragon</CardDescription>
-          </CardHeader>
-          <CardContent>
+        <div className="border border-dragon-navy/20 rounded-lg p-6 bg-white">
+          <div className="mb-4">
+            <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">Color Palette</h3>
+            <p className="text-gray-600">The five sacred colors of the Ocean Dragon</p>
+          </div>
+          <div>
             <div className="grid grid-cols-5 gap-4">
               {Object.entries(oceanDragonPalette).map(([name, color]) => (
                 <div key={name} className="text-center space-y-2">
@@ -41,108 +39,125 @@ export function ColorPaletteShowcase() {
                 </div>
               ))}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
-        {/* Button Variants Showcase */}
-        <Card className="border-dragon-navy/20">
-          <CardHeader>
-            <CardTitle className="text-dragon-deep-purple">Dragon-Themed Button Variants</CardTitle>
-            <CardDescription>
+        {/* Interactive Elements Showcase */}
+        <div className="border border-dragon-navy/20 rounded-lg p-6 bg-white">
+          <div className="mb-4">
+            <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">
+              Dragon-Themed Interactive Elements
+            </h3>
+            <p className="text-gray-600">
               Interactive elements styled with the Ocean Dragon palette
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+            </p>
+          </div>
+          <div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <Button variant="default">Default</Button>
-              <Button variant="dragon">Dragon Navy</Button>
-              <Button variant="emerald">Dragon Emerald</Button>
-              <Button variant="teal">Dragon Teal</Button>
-              <Button variant="mystical">Mystical Gradient</Button>
-              <Button variant="outline_dragon">Dragon Outline</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="outline">Outline</Button>
-              <Button variant="ghost">Ghost</Button>
+              <div className="px-4 py-2 bg-gray-800 text-white rounded cursor-pointer hover:bg-gray-700 transition-colors text-center">
+                Default
+              </div>
+              <div className="px-4 py-2 bg-dragon-navy text-white rounded cursor-pointer hover:bg-dragon-navy/80 transition-colors text-center">
+                Dragon Navy
+              </div>
+              <div className="px-4 py-2 bg-dragon-emerald text-white rounded cursor-pointer hover:bg-dragon-emerald/80 transition-colors text-center">
+                Dragon Emerald
+              </div>
+              <div className="px-4 py-2 bg-dragon-teal text-white rounded cursor-pointer hover:bg-dragon-teal/80 transition-colors text-center">
+                Dragon Teal
+              </div>
+              <div className="px-4 py-2 bg-gradient-to-r from-dragon-deep-purple to-dragon-dark-purple text-white rounded cursor-pointer hover:opacity-80 transition-opacity text-center">
+                Mystical Gradient
+              </div>
+              <div className="px-4 py-2 border border-dragon-navy text-dragon-navy rounded cursor-pointer hover:bg-dragon-navy hover:text-white transition-colors text-center">
+                Dragon Outline
+              </div>
             </div>
 
             <div className="mt-6 space-y-2">
               <h4 className="font-semibold text-dragon-deep-purple">Different Sizes</h4>
               <div className="flex items-center gap-4">
-                <Button variant="dragon" size="sm">
+                <div className="px-3 py-1 bg-dragon-navy text-white rounded cursor-pointer hover:bg-dragon-navy/80 transition-colors text-sm">
                   Small
-                </Button>
-                <Button variant="emerald" size="default">
+                </div>
+                <div className="px-4 py-2 bg-dragon-emerald text-white rounded cursor-pointer hover:bg-dragon-emerald/80 transition-colors">
                   Default
-                </Button>
-                <Button variant="teal" size="lg">
+                </div>
+                <div className="px-6 py-3 bg-dragon-teal text-white rounded cursor-pointer hover:bg-dragon-teal/80 transition-colors text-lg">
                   Large
-                </Button>
-                <Button variant="mystical" size="icon">
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-r from-dragon-deep-purple to-dragon-dark-purple text-white rounded cursor-pointer hover:opacity-80 transition-opacity flex items-center justify-center">
                   🐉
-                </Button>
+                </div>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
-        {/* Cards Showcase */}
+        {/* Content Showcase */}
         <div className="grid md:grid-cols-3 gap-6">
-          <Card className="border-dragon-emerald/30 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-dragon-deep-purple">🌊 Ocean Depths</CardTitle>
-              <CardDescription>Explore the mysterious waters where dragons dwell</CardDescription>
-            </CardHeader>
-            <CardContent>
+          <div className="border border-dragon-emerald/30 hover:shadow-lg transition-shadow rounded-lg p-6 bg-white">
+            <div className="mb-4">
+              <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">
+                🌊 Ocean Depths
+              </h3>
+              <p className="text-gray-600">Explore the mysterious waters where dragons dwell</p>
+            </div>
+            <div>
               <p className="text-dragon-navy">
                 Dive deep into the mystical waters and discover the secrets hidden beneath the
                 waves.
               </p>
-              <Button variant="emerald" className="mt-4">
+              <div className="px-4 py-2 bg-dragon-emerald text-white rounded cursor-pointer hover:bg-dragon-emerald/80 transition-colors mt-4 inline-block">
                 Explore
-              </Button>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
 
-          <Card className="border-dragon-teal/30 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-dragon-deep-purple">🐉 Dragon Scales</CardTitle>
-              <CardDescription>Collect and nurture your dragon companions</CardDescription>
-            </CardHeader>
-            <CardContent>
+          <div className="border border-dragon-teal/30 hover:shadow-lg transition-shadow rounded-lg p-6 bg-white">
+            <div className="mb-4">
+              <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">
+                🐉 Dragon Scales
+              </h3>
+              <p className="text-gray-600">Collect and nurture your dragon companions</p>
+            </div>
+            <div>
               <p className="text-dragon-navy">
                 Each dragon scale tells a story of ancient power and mystical energy.
               </p>
-              <Button variant="teal" className="mt-4">
+              <div className="px-4 py-2 bg-dragon-teal text-white rounded cursor-pointer hover:bg-dragon-teal/80 transition-colors mt-4 inline-block">
                 Collect
-              </Button>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
 
-          <Card className="border-dragon-navy/30 hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-dragon-deep-purple">⚡ Mystical Powers</CardTitle>
-              <CardDescription>Harness the elemental forces of your dragons</CardDescription>
-            </CardHeader>
-            <CardContent>
+          <div className="border border-dragon-navy/30 hover:shadow-lg transition-shadow rounded-lg p-6 bg-white">
+            <div className="mb-4">
+              <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">
+                ⚡ Mystical Powers
+              </h3>
+              <p className="text-gray-600">Harness the elemental forces of your dragons</p>
+            </div>
+            <div>
               <p className="text-dragon-navy">
                 Unlock the hidden potential within each dragon and master their unique abilities.
               </p>
-              <Button variant="mystical" className="mt-4">
+              <div className="px-4 py-2 bg-gradient-to-r from-dragon-deep-purple to-dragon-dark-purple text-white rounded cursor-pointer hover:opacity-80 transition-opacity mt-4 inline-block">
                 Unleash
-              </Button>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Theme Information */}
-        <Card className="border-dragon-deep-purple/30 bg-gradient-to-r from-dragon-deep-purple/5 to-dragon-dark-purple/5">
-          <CardHeader>
-            <CardTitle className="text-dragon-deep-purple">🎨 Design System</CardTitle>
-            <CardDescription>
+        <div className="border border-dragon-deep-purple/30 bg-gradient-to-r from-dragon-deep-purple/5 to-dragon-dark-purple/5 rounded-lg p-6">
+          <div className="mb-4">
+            <h3 className="text-dragon-deep-purple text-xl font-semibold mb-2">🎨 Design System</h3>
+            <p className="text-gray-600">
               How the Ocean Dragon palette enhances your Dragon Farm experience
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
+            </p>
+          </div>
+          <div className="space-y-4">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h4 className="font-semibold text-dragon-deep-purple mb-2">Color Meanings</h4>
@@ -188,8 +203,8 @@ export function ColorPaletteShowcase() {
                 </ul>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
