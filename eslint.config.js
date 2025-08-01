@@ -11,7 +11,13 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
-    ignores: ["dist/**", "node_modules/**", ".eslintrc.cjs", "storybook-static/**"],
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      ".eslintrc.cjs",
+      "tailwind.config.cjs",
+      "storybook-static/**",
+    ],
     plugins: {
       react: pluginReact,
       "react-hooks": pluginReactHooks,
