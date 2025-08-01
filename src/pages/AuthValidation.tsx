@@ -1,5 +1,3 @@
-const AuthValidation = () => {
-  return <div></div>;
-};
+const AuthValidation = () => <div className="space-x-4"></div>;
 
 export default AuthValidation;
