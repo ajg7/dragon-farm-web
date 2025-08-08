@@ -1,10 +1,77 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
+import { H1, H5 } from "@/components/ui/Header";
+import Input from "@/components/ui/Input/input";
+
 const AuthValidation = () => {
-  return <div></div>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-dragon-deep-purple to-dragon-dark-purple p-8 space-y-6">
+      <H1 align="center" className="text-text-inverse">
+        Dragon Farm
+      </H1>
+      <H5 align="center" className="text-text-accent">
+        Enter the mystical realm of dragons
+      </H5>
+      <Card className="max-w-md mx-auto p-6 bg-white backdrop-blur-lg border border-border rounded-lg shadow-lg">
+        <CardHeader className="space-y-1 text-center">
+          <CardTitle>Welcome Back</CardTitle>
+          <CardDescription>Sign in to your dragon farm</CardDescription>
+        </CardHeader>
+        <CardContent>
+          {/**
+           * Here is where email and password inputs will go
+           * along with a submit button for authentication.
+           * along with a remember me checkbox.
+           * We will also have a link to reset password.
+           *
+           * Then a separator for OAuth providers like Google, Facebook, etc.
+           * Then a link to sign up if the user doesn't have an account.
+           */}
+          <Input
+            className="mb-4"
+            type="email"
+            title="Email"
+            placeholder="Enter your email address"
+          />
+          <Input type="password" title="Password" placeholder="Enter your password" />
+          <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center">
+              <input type="checkbox" className="mr-2" id="remember-me" />
+              <label htmlFor="remember-me" className="text-sm text-text-muted">
+                Remember me
+              </label>
+            </div>
+            <a href="#" className="text-sm text-text-muted">
+              Forgot password?
+            </a>
+          </div>
+          <button className="w-full px-4 py-2 mt-4 text-white bg-mystical rounded-md hover:bg-accent-dark transition-colors">
+            Sign In
+          </button>
+          {/* Separator */}
+          <div className="flex items-center my-4">
+            <hr className="flex-grow border-t border-border" />
+            <span className="mx-2 text-sm text-text-muted">or</span>
+            <hr className="flex-grow border-t border-border" />
+          </div>
+          <button className="w-full px-4 py-2 mb-2 text-white bg-red-600 rounded-md hover:bg-red-700 transition-colors">
+            Sign in with Google
+          </button>
+          <button className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
+            Sign in with Facebook
+          </button>
+          <p className="mt-4 text-sm text-center text-text-muted">
+            New to Dragon Farm?{" "}
+            <a href="#" className="text-accent hover:underline">
+              Sign Up
+            </a>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
 };
 
 /**
- * We need a header1, header2, header3
- * We need a card
  * We need an input
  * We need a button
  * We need a Text
