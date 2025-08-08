@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { H1, H5 } from "@/components/ui/Header";
 import Input from "@/components/ui/Input/input";
+import Separator from "@/components/ui/Separator/separator";
 
 const AuthValidation = () => {
   return (
@@ -17,15 +18,6 @@ const AuthValidation = () => {
           <CardDescription>Sign in to your dragon farm</CardDescription>
         </CardHeader>
         <CardContent>
-          {/**
-           * Here is where email and password inputs will go
-           * along with a submit button for authentication.
-           * along with a remember me checkbox.
-           * We will also have a link to reset password.
-           *
-           * Then a separator for OAuth providers like Google, Facebook, etc.
-           * Then a link to sign up if the user doesn't have an account.
-           */}
           <Input
             className="mb-4"
             type="email"
@@ -47,12 +39,7 @@ const AuthValidation = () => {
           <button className="w-full px-4 py-2 mt-4 text-white bg-mystical rounded-md hover:bg-accent-dark transition-colors">
             Sign In
           </button>
-          {/* Separator */}
-          <div className="flex items-center my-4">
-            <hr className="flex-grow border-t border-border" />
-            <span className="mx-2 text-sm text-text-muted">or</span>
-            <hr className="flex-grow border-t border-border" />
-          </div>
+          <Separator text="or" />
           <button className="w-full px-4 py-2 mb-2 text-white bg-red-600 rounded-md hover:bg-red-700 transition-colors">
             Sign in with Google
           </button>
