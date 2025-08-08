@@ -2,6 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { H1, H5 } from "@/components/ui/Header";
 import Input from "@/components/ui/Input/input";
 import Separator from "@/components/ui/Separator/separator";
+import { P } from "@/components/ui/Text";
+import { Checkbox } from "@/components/ui/Checkboxes";
+import { Button, LinkButton } from "@/components/ui/Buttons";
 
 const AuthValidation = () => {
   return (
@@ -26,47 +29,41 @@ const AuthValidation = () => {
           />
           <Input type="password" title="Password" placeholder="Enter your password" />
           <div className="flex items-center justify-between mt-4">
-            <div className="flex items-center">
-              <input type="checkbox" className="mr-2" id="remember-me" />
-              <label htmlFor="remember-me" className="text-sm text-text-muted">
-                Remember me
-              </label>
-            </div>
+            <Checkbox
+              id="remember-me"
+              label="Remember me"
+              size="sm"
+              variant="primary"
+              labelVariant="muted"
+            />
             <a href="#" className="text-sm text-text-muted">
               Forgot password?
             </a>
           </div>
-          <button className="w-full px-4 py-2 mt-4 text-white bg-mystical rounded-md hover:bg-accent-dark transition-colors">
+          <Button variant="mystical" fullWidth className="mt-4">
             Sign In
-          </button>
+          </Button>
           <Separator text="or" />
-          <button className="w-full px-4 py-2 mb-2 text-white bg-red-600 rounded-md hover:bg-red-700 transition-colors">
+          <Button variant="destructive" fullWidth className="mb-2">
             Sign in with Google
-          </button>
-          <button className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
+          </Button>
+          <Button
+            variant="outline"
+            fullWidth
+            className="border-blue-600 text-blue-600 bg-blue-600 text-white"
+          >
             Sign in with Facebook
-          </button>
-          <p className="mt-4 text-sm text-center text-text-muted">
+          </Button>
+          <P size="sm" align="center" variant="muted" className="mt-4">
             New to Dragon Farm?{" "}
-            <a href="#" className="text-accent hover:underline">
+            <LinkButton variant="link-emerald" href="/signup">
               Sign Up
-            </a>
-          </p>
+            </LinkButton>
+          </P>
         </CardContent>
       </Card>
     </div>
   );
 };
-
-/**
- * We need an input
- * We need a button
- * We need a Text
- * We need a Checkbox
- * We need an Icon
- * We need a Link
- * We need a Separator
- * We need a Form
- */
 
 export default AuthValidation;

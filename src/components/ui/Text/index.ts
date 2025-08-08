@@ -1,0 +1,17 @@
+export {
+  Text,
+  textVariants,
+  P,
+  Span,
+  Label,
+  Small,
+  Strong,
+  Em,
+  Mark,
+  Del,
+  Ins,
+  Sub,
+  Sup,
+  type TextProps,
+  type LabelProps,
+} from "./text";
